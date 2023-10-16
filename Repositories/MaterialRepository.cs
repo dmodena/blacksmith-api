@@ -1,7 +1,7 @@
 ﻿using BlacksmithAPI.Data;
 using BlacksmithAPI.Models;namespace BlacksmithAPI.Repositories;
 
-internal class InventoryRepository
+internal class MaterialRepository : IMaterialRepository
 {
     public Material GetById(string id)
     {

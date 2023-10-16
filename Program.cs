@@ -1,6 +1,10 @@
-var builder = WebApplication.CreateBuilder(args);
+using BlacksmithAPI.Repositories;
+using BlacksmithAPI.Services;var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddScoped<IOrderService, OrderService>();
+builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
+builder.Services.AddScoped<IMaterialRepository, MaterialRepository>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

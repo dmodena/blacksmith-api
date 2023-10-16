@@ -6,10 +6,13 @@ namespace BlacksmithAPI.Controllers;
 [Route("[controller]")]
 public class OrderController : ControllerBase
 {
+    private readonly IOrderService _service;
+
+    public OrderController(IOrderService service) => _service = service;
+
     [HttpPost(Name = "Request Order")]
     public Order RequestOrder([FromBody] OrderRequest request)
     {
-        var service = new OrderService();
-        return service.RequestOrder(request);
+        return _service.RequestOrder(request);
     }
 }

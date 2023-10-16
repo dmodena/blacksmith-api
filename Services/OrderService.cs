@@ -1,14 +1,17 @@
 ﻿using BlacksmithAPI.Models;using BlacksmithAPI.Repositories;namespace BlacksmithAPI.Services;
 
-public class OrderService
+public class OrderService : IOrderService
 {
+    private ICustomerRepository _customerRepository;
+    private IMaterialRepository _materialRepository;
 
-	public Order RequestOrder(OrderRequest request)	{        // Check client        CustomerRepository customerRepository = new CustomerRepository();
-        Customer customer = customerRepository.GetById(request.CustomerId);
+    public OrderService(ICustomerRepository customerRepository, IMaterialRepository materialRepository)    {        _customerRepository = customerRepository;        _materialRepository = materialRepository;    }
+
+	public Order RequestOrder(OrderRequest request)	{        // Check client
+        Customer customer = _customerRepository.GetById(request.CustomerId);
 
         // Check inventory
-        InventoryRepository inventoryRepository = new InventoryRepository();
-        float materialModifier = inventoryRepository.GetMaterialPriceModifier(request.Material);        // Calculate price        int price = 0;
+        float materialModifier = _materialRepository.GetMaterialPriceModifier(request.Material);        // Calculate price        int price = 0;
         if (request.ItemType == "Sword")
         {
             price = 5 * (int)materialModifier;
@@ -55,4 +58,3 @@ public class OrderService
             DeliveryDate = deliveryDate
         };    }
 }
-
