@@ -11,18 +11,18 @@ public class OrderService : IOrderService
         Customer customer = _customerRepository.GetById(request.CustomerId);
 
         // Check inventory
-        float materialModifier = _materialRepository.GetMaterialPriceModifier(request.Material);        // Calculate price        int price = 0;
+        float materialModifier = _materialRepository.GetMaterialPriceModifier(request.Material);        // Calculate price        decimal price = 0;
         if (request.ItemType == "Sword")
         {
-            price = 5 * (int)materialModifier;
+            price = 5 * (decimal)materialModifier;
         }
         else if (request.ItemType == "Spear")
         {
-            price = 15 * (int)materialModifier;
+            price = 15 * (decimal)materialModifier;
         }
         else if (request.ItemType == "Shield")
         {
-            price = 25 * (int)materialModifier;
+            price = 25 * (decimal)materialModifier;
         }
 
         // Calculate delivery date
@@ -48,13 +48,13 @@ public class OrderService : IOrderService
         if (customer.Category == "Premium")
         {
             deliveryDate = deliveryDate.AddDays(-2);
-            price = (int)(price * 0.9);
+            price = price * 0.9m;
         }
 
         return new Order()
         {
             Id = 1,
-            Price = price,
+            Price = decimal.Round(price, 2),
             DeliveryDate = deliveryDate
         };    }
 }
