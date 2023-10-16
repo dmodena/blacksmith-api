@@ -1,4 +1,5 @@
-using Microsoft.AspNetCore.Mvc;
+using BlacksmithAPI.Models;
+using BlacksmithAPI.Repositories;using Microsoft.AspNetCore.Mvc;
 
 namespace BlacksmithAPI.Controllers;
 

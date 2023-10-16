@@ -1,4 +1,5 @@
-namespace BlacksmithAPI;
+using BlacksmithAPI.Data;
+using BlacksmithAPI.Models;namespace BlacksmithAPI.Repositories;
 
 public class CustomerRepository
 {

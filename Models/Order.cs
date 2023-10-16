@@ -1,4 +1,4 @@
-namespace BlacksmithAPI;
+namespace BlacksmithAPI.Models;
 
 public class Order 
 {
