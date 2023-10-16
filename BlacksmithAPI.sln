@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34009.444
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlacksmithAPI", "BlacksmithAPI\BlacksmithAPI.csproj", "{48C3473A-B6D6-4A27-96B8-8E63439E3CDF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlacksmithAPI.Tests", "BlacksmithAPI.Tests\BlacksmithAPI.Tests.csproj", "{031ADDB6-59B7-4D6E-9161-EE6BD64C7DB6}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -33,5 +35,17 @@ Global
 		{48C3473A-B6D6-4A27-96B8-8E63439E3CDF}.Release|x64.Build.0 = Release|Any CPU
 		{48C3473A-B6D6-4A27-96B8-8E63439E3CDF}.Release|x86.ActiveCfg = Release|Any CPU
 		{48C3473A-B6D6-4A27-96B8-8E63439E3CDF}.Release|x86.Build.0 = Release|Any CPU
+		{031ADDB6-59B7-4D6E-9161-EE6BD64C7DB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{031ADDB6-59B7-4D6E-9161-EE6BD64C7DB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{031ADDB6-59B7-4D6E-9161-EE6BD64C7DB6}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{031ADDB6-59B7-4D6E-9161-EE6BD64C7DB6}.Debug|x64.Build.0 = Debug|Any CPU
+		{031ADDB6-59B7-4D6E-9161-EE6BD64C7DB6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{031ADDB6-59B7-4D6E-9161-EE6BD64C7DB6}.Debug|x86.Build.0 = Debug|Any CPU
+		{031ADDB6-59B7-4D6E-9161-EE6BD64C7DB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{031ADDB6-59B7-4D6E-9161-EE6BD64C7DB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{031ADDB6-59B7-4D6E-9161-EE6BD64C7DB6}.Release|x64.ActiveCfg = Release|Any CPU
+		{031ADDB6-59B7-4D6E-9161-EE6BD64C7DB6}.Release|x64.Build.0 = Release|Any CPU
+		{031ADDB6-59B7-4D6E-9161-EE6BD64C7DB6}.Release|x86.ActiveCfg = Release|Any CPU
+		{031ADDB6-59B7-4D6E-9161-EE6BD64C7DB6}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
